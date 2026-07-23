@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { useScrollProgress } from '../../hooks/useScrollProgress'
-import CometScene from './CometScene'
+import BifrostTunnel from './BifrostTunnel'
 import ImpactOverlay from './ImpactOverlay'
 import BootSequence from './BootSequence'
 import Aurora from '../reactbits/Aurora'
@@ -33,7 +33,7 @@ export default function IntroContainer() {
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         {currentScene <= 2 && (
-          <CometScene progress={scene1} visible={currentScene === 1} />
+          <BifrostTunnel progress={scene1} visible={currentScene <= 2} />
         )}
 
         {currentScene === 2 && <ImpactOverlay progress={scene2} />}
